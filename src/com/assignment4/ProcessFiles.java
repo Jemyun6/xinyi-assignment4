@@ -49,7 +49,7 @@ public class ProcessFiles {
 					else if(cols[2].contains("STAT")) {
 						c2.add(currentPerson);
 					}
-					else if(cols[3].contains("APMTH")) {
+					else {
 						c3.add(currentPerson);
 					}
 				}
@@ -63,21 +63,21 @@ public class ProcessFiles {
 		Collections.sort(c1, new Comparator<Person>() { 
 			@Override
 			public int compare(Person o1, Person o2) { 
-				return o1.getGrade().compareTo(o2.getGrade());
+				return o2.getGrade().compareTo(o1.getGrade());
 			}
 			
 		});
 		Collections.sort(c2, new Comparator<Person>() { 
 			@Override
 			public int compare(Person o1, Person o2) { 
-				return o1.getGrade().compareTo(o2.getGrade());
+				return o2.getGrade().compareTo(o1.getGrade());
 			}
 			
 		});
 		Collections.sort(c3, new Comparator<Person>() { 
 			@Override
 			public int compare(Person o1, Person o2) { 
-				return o1.getGrade().compareTo(o2.getGrade());
+				return o2.getGrade().compareTo(o1.getGrade());
 			}
 			
 		});
